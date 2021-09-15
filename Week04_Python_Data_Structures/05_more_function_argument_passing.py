@@ -35,6 +35,9 @@ change(copy.deepcopy(L))
 def change(list):
 	list_copy = copy.deepcopy(list)
 
+L = [1, 2, 3]
+change(L)
+
 #-------------------------------------------------------------------------------
 
 #--------------------FUNCTION PARAMETERS WITH DEFAULT VALUES--------------------
@@ -79,6 +82,7 @@ f(1, c=3)          # Displays 1, 6, 3
 
 #-------------THE *ARGS PARAMETER (VARIABLE LENGTH PARAMETER LISTS)-------------
 
+
 # Functions can also have a single parameter with an asterisk in front of the
 # parameter name.
 
@@ -94,8 +98,8 @@ f(1, c=3)          # Displays 1, 6, 3
 # A Tuple can be accessed with many of the same features as a list.
 
 def f(*args):
-    for x in args:
-        print(x, end=' ')
+    for y in args:
+        print(y, end=' ')
     print()
 
 f()            # Displays nothing
@@ -151,7 +155,7 @@ f(**D)     # prints 1, 2, 3
 # definition or call. The order they must appear is very important.
 
 # For a function header / definition parameters must appear in this order:
-#    1. any normal parameters (name)
+#    1. any normal parameters (positional parameters) (name)
 #    2. any default parameters (name=value)
 #    3. variable-length parameter (*name)
 #    4. variable-length keyword parameter (**name)
@@ -168,10 +172,10 @@ def f(a, b, c=10, s1='python', *args, **kwargs):
 
 # Example function call with all types in the correct order
 def my_function(a, b, c, s1, e, f, g, x, y, z):
-    pass
+    print(a, b, c, s1, e, f, g, x, y, z)
 
 list1 = [11, 12, 13]
-D = {'x': 8000, 'y': 9000 , 'z': 10000}
+D = {'x': 8000, 'y': 9000, 'z': 10000}
 
 my_function(7, 42, s1='java', c=77, *list1, **D)
 #-------------------------------------------------------------------------------

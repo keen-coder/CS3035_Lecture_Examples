@@ -19,9 +19,9 @@ import random
 # Example: Building a list of random numbers using a loop vs using a comprehension.
 
 # Using a loop:
-list1 = []
-total_numbers = 10
-count = 1
+list1: list = []
+total_numbers: int = 10
+count: int = 1
 
 while count <= total_numbers:
     list1.append(random.randint(0, 20))
@@ -37,9 +37,8 @@ print(list1)
 
 # MORE EXAMPLES
 list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-list2 = [12, 13, 14, 15, 16, 17, 18, 19, 20]
-list3 = ['a', 'b']
-list4 = ['d', 'e']
+list2 = ['a', 'b']
+list3 = ['d', 'e']
 
 # Create a new list where each item is multiplied by 10
 result = [x * 10 for x in list1]
@@ -50,7 +49,7 @@ result = [x for x in list1 if x % 2 != 0]
 print(result)  # prints [1, 3, 5, 7, 9]
 
 # Apply one comprehension to two lists like using nested for loops
-result = [x + y for x in list3 for y in list4]
+result = [x + y for x in list2 for y in list3]
 print(result)  # prints ['ad', 'ae', 'bd', 'be']
 
 #-------------------------------------------------------------------------------
@@ -86,12 +85,13 @@ print(list1)  # prints [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]
 
 # Multiple if conditions can be used to mean BOTH must be true.
 list1 = [5, -10, 6, 20, 50, 21, -42, 46, 11, 31, 101, -1000, 32, 88]
-result = [x for x in list1 if x % 2 == 0 if x > 0]
+result = [x for x in list1 if x % 2 == 0  if x > 0]
+
 print(result)  # prints [6, 20, 50, 46, 32, 88]
 
 # An if/else type syntax can also be used
 list1 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-result = [number + 1 if number % 2 == 0 else number - 1 for number in list1]
+result = [(number + 1 if number % 2 == 0 else number - 1) for number in list1 if number > 50]
 print(result)  # prints [1, 0, 3, 2, 5, 4, 7, 6, 9, 8]
 
 #-------------------------------------------------------------------------------

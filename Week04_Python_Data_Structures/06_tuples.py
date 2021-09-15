@@ -20,6 +20,8 @@ T = ()
 # Without the comma this would simply be an expression
 T = (7,)
 
+x = (7)
+
 # A four-item Tuple
 T = (7, 'Ni', 1.2, 'Holy Hand Grenade')
 
@@ -30,6 +32,19 @@ T = ('Knights', ('Monty', 'Python'))
 T = tuple('spam')
 
 #-------------------------------------------------------------------------------
+
+#----Creating a List of Tuple------
+
+characters = ['a', 'b', 'c', 'd']
+values = [4.657, 90.723, 20.456, 31.78]
+
+result = []
+
+for index in range(len(characters)):
+    result.append( (characters[index], values[index]) )
+
+for item in result():
+    print(item)
 
 #----------------------------OTHER TUPLE OPERATIONS-----------------------------
 

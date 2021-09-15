@@ -38,8 +38,8 @@ D = {'employee': {'name': 'Bob', 'age': 40}}
 D = {'name': 'Bob', 'age': 40}
 print(D['name']) # prints 'Bob'
 
-D = {'employee': {'name': 'Bob', 'age': 40}}
-print(D['employee']['age']) # prints 40
+D = {'employee1': {'name': 'Bob', 'age': 40}, 'employee2': {'name': 'Mary', 'age': 32}}
+print(D['employee1']['age']) # prints 40
 
 #-------------------------------------------------------------------------------
 

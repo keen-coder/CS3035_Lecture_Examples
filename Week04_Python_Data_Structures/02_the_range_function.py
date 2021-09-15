@@ -27,7 +27,7 @@ print()
 # NOTE This is not the 'pythonic' way to iterate over a list.
 list1 = ['a', 'b', 'c', 'd', 'e']
 
-for i in range(0, len(list1)):
+for i in range(len(list1)):
     print(list1[i], end=' ')  # print a b c d e
 print()
 

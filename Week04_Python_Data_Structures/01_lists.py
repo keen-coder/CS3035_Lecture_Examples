@@ -42,8 +42,8 @@ print(len(list1))  # prints 3
 print(len(list2))  # prints 4
 
 # Lists can be concatenated together using the addition '+' operator
-list3: list = list1 + list2
-print(list3)  # prints [1, 2, 3, 4, 5, 6, 7]
+list3: list = list2 + list1
+print(list3)  # prints [4, 5, 6, 7, 1, 2, 3]
 
 # Lists can also be repeated using the multiplication '*' operator
 list3: list = list2 * 3
@@ -97,7 +97,7 @@ print(list1[-6])  # prints 50
 # a list using indexing
 # NOTE: This is not the preferred way to iterate over a list.  See previous
 # example using the in operator.
-for i in range(0, len(list1)):
+for i in range(len(list1)):
     print(list1[i], end=' ')   # prints 10 20 30 40 50 60 70 80 90 100
 print()
 
@@ -109,13 +109,13 @@ print()
 # strings.
 
 # Slicing and extended slicing always return a new list that is shallow copied.
-# Syntax: list_name[start:end:step]
+# Syntax1: list_name[start:end:+step]
+# Syntax2: list_name[end:start:-step]
 
 # See notes on string slicing.
 
 list1: list = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 
-print('slicing')
 print(list1[:])        # prints [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
 print(list1[4:])       # prints [50, 60, 70, 80, 90, 100]
 print(list1[:6])       # prints [10, 20, 30, 40, 50, 60]
@@ -123,7 +123,7 @@ print(list1[3:7])      # prints [40, 50, 60, 70]
 print(list1[::-1])     # prints [100, 90, 80, 70, 60, 50, 40, 30, 20, 10]
 print(list1[::2])      # prints [10, 30, 50, 70, 90]
 print(list1[1::2])     # prints [20, 40, 60, 80, 100]
-print(list1[10:0:-3])  # prints [100, 70, 40]
+print(list1[10:-1:-3])  # prints [100, 70, 40]
 
 #-------------------------------------------------------------------------------
 
@@ -175,8 +175,8 @@ table: list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 print(table[1][1])  # prints 5
 
 # You can iterate over a multi-dimensional list using indexing
-for row in range(0, len(table)):
-    for col in range(0, len(table[row])):
+for row in range(len(table)):
+    for col in range(len(table[row])):
         print(table[row][col], end=' ')
     print()
 
