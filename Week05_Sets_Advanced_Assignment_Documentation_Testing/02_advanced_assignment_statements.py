@@ -74,7 +74,7 @@ a, b = seq
 
 # SyntaxError: starred assignment target must be in a list or tuple.
 # The variables on the left must be part of a list or tuple.
-*a = seq
+# *a = seq
 
 # The previous error can be fixed by the following
 *a, = seq
