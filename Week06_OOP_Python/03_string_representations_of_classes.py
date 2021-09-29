@@ -12,6 +12,3 @@
 
 #-------------------------------------------------------------------------------
 
-https://stackoverflow.com/questions/1436703/what-is-the-difference-between-str-and-repr
-https://www.geeksforgeeks.org/str-vs-repr-in-python/
-
